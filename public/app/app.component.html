@@ -1,0 +1,24 @@
+<div>
+    <h3> User Details </h3>
+    <ng-content></ng-content>
+    <table border=1 *ngIf="response">
+        <thead>
+            <tr>
+                <th>First Name{{response}}</th> 
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Company</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of response; let i = index">
+                    <td width="20%">{{user.fname}}</td>
+                    <td width="20%">{{user.lname}}</td>
+                    <td width="20%">{{user.email}}</td>
+                    <td width="20%">{{user.phone}}</td>
+                    <td width="20%">{{user.company}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
